@@ -29,12 +29,12 @@ class TunesController < ApplicationController
   def destroy
     @tune = Tune.find(params[:id])
     @tune.destroy
-    redirect_to tunes_path
+    redirect_to pages_home_path
   end
 
   private
 
   def tune_params
-    params.require(:tune).permit(:name, :artist, :album, :genre)
+    params.require(:tune).permit(:name, :artist, :album, :genre, :link, :photo)
   end
 end

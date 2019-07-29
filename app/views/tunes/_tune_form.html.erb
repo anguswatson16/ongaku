@@ -1,11 +1,10 @@
-<%= form_for(tune) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :artist %>
-  <%= f.text_field :artist %>
-  <%= f.label :album %>
-  <%= f.text_field :album %>
-  <%= f.label :genre %>
-  <%= f.text_field :genre %>
+<%= simple_form_for(tune) do |f| %>
+  <%= f.input :name, label: 'Title' %>
+  <%= f.input :artist, label: 'Artist' %>
+  <%= f.input :album, label: 'Album' %>
+  <%= f.input :genre, label: 'Genre' %>
+  <%= f.input :link, label: 'Link' %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
   <%= f.submit %>
 <% end %>
