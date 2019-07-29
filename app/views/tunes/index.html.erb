@@ -1,0 +1,10 @@
+<% @tunes.each do |tune| %>
+  <%= link_to tune_path(tune) do %>
+    <div class="card-product">
+      <div class="card-product-infos">
+        <h2><%= tune.name %></h2>
+        <p><%= tune.artist %></p>
+      </div>
+    </div>
+  <% end %>
+<% end %>
