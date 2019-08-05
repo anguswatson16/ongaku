@@ -1,16 +1,15 @@
-<div class="container">
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @tune.photo, crop: :fill %>');">
-    <div class="container">
-      <h1><%= @tune.name %></h1>
-      <p><%= @tune.artist %></p>
-    </div>
-  </div>
-  <div class="tune_info">
-    <%= @tune.album %>
-    <%= @tune.genre %>
-    <%= link_to "Listen Here", "#{@tune.link}" %>
-    <%= link_to "Delete", tune_path(@tune),
-          method: :delete,
-          data: { confirm: "Are you sure?" } %>
+<div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @tune.photo, crop: :fill %>');">
+  <div class="title">
+    <h1><%= @tune.name %></h1>
+    <p><%= @tune.artist %></p>
   </div>
 </div>
+<div class="tune_info">
+  <%= @tune.album %>
+  <%= @tune.genre %>
+  <%= link_to "Listen Here", "#{@tune.link}" %>
+  <%= link_to "Delete", tune_path(@tune),
+        method: :delete,
+        data: { confirm: "Are you sure?" } %>
+</div>
+
