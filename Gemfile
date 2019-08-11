@@ -73,5 +73,4 @@ gem 'carrierwave', '~> 1.2'
 # Search
 
 gem 'searchkick', '~> 3.0'
-
-
+gem 'pg_search'

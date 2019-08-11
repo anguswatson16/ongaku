@@ -1,7 +1,13 @@
-<h1>Ongaku</h1>
-
+<h1>MusicMe</h1>
+<%= form_tag tunes_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find music"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
 <ul>
-  <li>Tune Search</li>
   <li><%= link_to "Tune Feed", tunes_path %></li>
   <li><%= link_to "Tune Feeder", new_tune_path %></li>
 </ul>
